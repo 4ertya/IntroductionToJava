@@ -1,6 +1,11 @@
-package branching;
+package by.epam.branching;
 
-public class Task1_1 {
+/**
+ * Даны два угла треугольника (в градусах). Определить, существует ли такой треугольник, и если да,
+ * то будет ли он прямоугольным.
+ */
+
+public class Task1 {
     public static void main(String[] args) {
         int angle1 = 60;
         int angle2 = 30;

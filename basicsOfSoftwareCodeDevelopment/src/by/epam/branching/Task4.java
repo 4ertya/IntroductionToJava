@@ -1,6 +1,10 @@
-package branching;
+package by.epam.branching;
 
-public class Task1_4 {
+/**
+ * Заданы размеры А, В прямоугольного отверстия и размеры х, у, z кирпича. Определить, пройдет ли кирпич через отверстие.
+ */
+
+public class Task4 {
     public static void main(String[] args) {
         int holeHeight = 3;
         int holeWidth = 4;

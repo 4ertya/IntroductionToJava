@@ -1,9 +1,10 @@
-package linearPrograms;
+package by.epam.linearPrograms;
 
 /**
- * find the value of the function: z=((a-3)*b/2)+c.
+ * Найдите  значение функции: z = ( (a – 3 ) * b / 2) + c.
  */
-public class Task1_1 {
+
+public class Task1 {
     public static void main(String[] args) {
         double a = 1;
         double b = 2;
@@ -11,6 +12,7 @@ public class Task1_1 {
         double result;
 
         result = ((a - 3) * b / 2) + c;
+
         System.out.println(result);
 
     }
