@@ -2,11 +2,11 @@ package by.epam.decomposition;
 
 import java.util.Scanner;
 
-public class Task1_17 {
+public class Task17 {
     private int number;
 
     public static void main(String[] args) {
-        Task1_17 task1_17 = new Task1_17();
+        Task17 task1_17 = new Task17();
         task1_17.setN();
         int result = task1_17.countOfIterationToZero();
         System.out.println(result+ " iterations");
