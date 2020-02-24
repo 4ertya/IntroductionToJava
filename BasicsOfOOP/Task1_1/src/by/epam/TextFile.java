@@ -1,3 +1,5 @@
+package by.epam;
+
 public class TextFile extends File {
 
     private String text;

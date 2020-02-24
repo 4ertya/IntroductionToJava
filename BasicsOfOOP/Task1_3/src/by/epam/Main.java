@@ -1,7 +1,14 @@
+package by.epam;
+
 import java.time.LocalDate;
 
+/**
+ * Создать класс Календарь с внутренним классом,
+ * с помощью объектов которого можно хранить информацию о выходных и праздничных днях.
+ */
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         int year = 2020;
         Calendar calendar = new Calendar(year);
         calendar.addHoliday(LocalDate.parse(year + "-01-01"), "New Year");

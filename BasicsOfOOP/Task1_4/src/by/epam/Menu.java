@@ -1,3 +1,5 @@
+package by.epam;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -6,9 +8,9 @@ public class Menu {
             "\n1. Print a list of treasures.\n" +
                     "2. Take treasures by numbers.\n" +
                     "3. Remove treasures from your list.\n" +
-                    "4.Print your list of Treasures.\n" +
+                    "4. Print your list of Treasures.\n" +
                     "5. Take different treasures for amount.\n" +
-                    "6.Exit.\n\n" +
+                    "6. Exit.\n\n" +
                     "Please make your choice: ";
 
     public static void makeAChoise() throws IOException {

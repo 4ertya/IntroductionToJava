@@ -1,3 +1,5 @@
+package by.epam;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +27,9 @@ public class User {
     public void printMyTreasures() {
         if (!myTreasures.isEmpty()) {
             myTreasures.forEach(System.out::println);
-        }else
+        } else
             System.err.println("Your list is empty!");
     }
-
 
 
     public void addTreasure(String numbers) throws IOException {
@@ -61,7 +62,7 @@ public class User {
         for (Treasure treasure : Cave.getInstance().shuffleAllTreasures()) {
             if ((sum + treasure.getCost()) < amount) {
                 myTreasures.add(treasure);
-                sum+=treasure.getCost();
+                sum += treasure.getCost();
             }
         }
     }

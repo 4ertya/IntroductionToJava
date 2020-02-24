@@ -1,6 +1,10 @@
+package by.epam;
+
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+
 
 public class Calendar {
     private int year;
@@ -29,19 +33,20 @@ public class Calendar {
         }
     }
 
-
-    public void addHoliday(LocalDate holidayDate, String nameOfHoliday) {
-        holidaysAndWeekends.add(new Holiday(holidayDate, nameOfHoliday));
-        Collections.sort(holidaysAndWeekends);
+    public void addHoliday(LocalDate date, String nameOfHoliday) {
+        holidaysAndWeekends.add(new Holiday(date, nameOfHoliday));
     }
 
-    public void printHolidaysAndWeekends() {
-        holidaysAndWeekends.sort(Comparator.comparing(Holiday::getHolidayDate));
+    public void printHolidaysAndWeekends() throws InterruptedException {
+        Collections.sort(holidaysAndWeekends);
         for (Holiday holiday : holidaysAndWeekends) {
-            if (holiday.getNameOfHoliday().equals("Saturday") || holiday.getNameOfHoliday().equals("Sunday")) {
-                System.out.println(holiday);
+            if (!holiday.nameOfHoliday.equals("Saturday") && !holiday.nameOfHoliday.equals("Sunday")) {
+                System.err.println(holiday + "HOLIDAY!!!!!!!!!!!");
+                System.err.flush();
+                Thread.sleep(100);
             } else {
-                System.err.println(holiday);
+                System.out.println(holiday);
+
             }
         }
     }
@@ -73,5 +78,6 @@ public class Calendar {
         public int compareTo(Holiday o) {
             return this.holidayDate.compareTo(o.getHolidayDate());
         }
+
     }
 }

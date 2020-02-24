@@ -1,3 +1,5 @@
+package by.epam;
+
 import java.util.ArrayList;
 
 public class Payment {
@@ -6,7 +8,7 @@ public class Payment {
     private String name;
 
     public Payment(String name) {
-        this.name=name;
+        this.name = name;
         this.cart = new ArrayList<>();
     }
 
@@ -23,14 +25,15 @@ public class Payment {
     }
 
     public void addProduct(double price, String name) {
-        cart.add(new Product(price,name));
-        this.price+=price;
+        cart.add(new Product(price, name));
+        this.price += price;
     }
-    public void removeProduct(String name){
-        for (int i=0;i<cart.size();i++){
-            if (cart.get(i).getName().equalsIgnoreCase(name)){
+
+    public void removeProduct(String name) {
+        for (int i = 0; i < cart.size(); i++) {
+            if (cart.get(i).getName().equalsIgnoreCase(name)) {
                 cart.remove(i);
-                this.price-=cart.get(i).getPrice();
+                this.price -= cart.get(i).getPrice();
                 break;
             }
         }
@@ -39,17 +42,17 @@ public class Payment {
     public ArrayList<Product> getCart() {
         return cart;
     }
-    public void printPaymentInfo (){
-        System.out.println("Payment: "+name);
+
+    public void printPaymentInfo() {
+        System.out.println("by.epam.Payment: " + name);
         cart.forEach(System.out::println);
         System.out.println("-------------------");
-        System.out.println("Total price: "+price+"\n");
+        System.out.println("Total price: " + price + "\n");
     }
 
 
-
     private class Product {
-       private double price;
+        private double price;
         private String name;
 
         public Product(double price, String name) {
@@ -67,7 +70,7 @@ public class Payment {
 
         @Override
         public String toString() {
-            return  name +
+            return name +
                     " - " + price;
         }
     }
